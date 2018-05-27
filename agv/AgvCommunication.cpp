@@ -6,8 +6,8 @@ AgvCommunication* AgvCommunication::instance = NULL;
 AgvCommunication::AgvCommunication()
 {
     ConfigUtil &config = Singleton<ConfigUtil>::getInstance();//读取配置文件中的内容
-    hostPort = config.getHostPort();//8080
-    agvPort = config.getAgvPort();//8080
+    hostPort = config.getHostPort();
+    agvPort = config.getAgvPort();
     stationPort = config.getStationPort();//8081
 //    qDebug()<<QStringLiteral("主机监听端口：")<<hostPort<<QStringLiteral("agv监听端口:")<<agvPort<<QStringLiteral("工位监听端口：")<<stationPort;
     hostIp.setAddress (QString(config.getHostIp ()));
