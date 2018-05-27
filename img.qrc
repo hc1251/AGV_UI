@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/AGV_1.png</file>
+        <file>images/AGV_2.png</file>
+        <file>images/AGV_3.png</file>
+        <file>images/AGV_4.png</file>
+        <file>images/logo.png</file>
+        <file>images/user.png</file>
+        <file>images/AgvImg.png</file>
+        <file>images/agvImg2.png</file>
+        <file>resource/map.png</file>
+        <file>images/AGV0_1.png</file>
+        <file>images/AGV0_2.png</file>
+        <file>images/AGV0_3.png</file>
+        <file>images/AGV0_4.png</file>
+        <file>images/AGV.png</file>
+        <file>images/AGV1.png</file>
+        <file>images/0AGV.png</file>
+        <file>images/1AGV.png</file>
+        <file>images/AGV0.png</file>
+        <file>images/agvImg3.png</file>
+        <file>images/agvImg1.png</file>
+        <file>images/dxAgv.jpg</file>
+        <file>images/gtAgv.jpg</file>
+        <file>images/jgAgv.jpg</file>
+        <file>images/qxAgv.jpg</file>
+        <file>images/sxAgv.jpg</file>
+        <file>images/ydAgv.jpg</file>
+    </qresource>
+</RCC>

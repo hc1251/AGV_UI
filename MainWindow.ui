@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>887</width>
+    <height>638</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AGV调度控制系统</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="img.qrc">
+    <normaloff>:/images/logo.png</normaloff>:/images/logo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,5,2">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);
+font: 75 24pt &quot;楷体&quot;;</string>
+        </property>
+        <property name="text">
+         <string>AGV调度控制系统</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="4,1">
+        <property name="spacing">
+         <number>6</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <item>
+         <widget class="QWidget" name="mapShowWidget" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>600</width>
+            <height>400</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout" stretch="5,0,6,1">
+          <item>
+           <widget class="QCustomPlot" name="widget" native="true"/>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="stationInfoTableWidget">
+            <property name="selectionMode">
+             <enum>QAbstractItemView::MultiSelection</enum>
+            </property>
+            <property name="selectionBehavior">
+             <enum>QAbstractItemView::SelectRows</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="stationReleaseBtn">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>AGV送货</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton">
+              <property name="text">
+               <string>删除选中</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="3,2,1">
+        <property name="spacing">
+         <number>40</number>
+        </property>
+        <property name="rightMargin">
+         <number>20</number>
+        </property>
+        <item>
+         <widget class="QTableWidget" name="tableWidget">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">selection-background-color: rgb(0, 0, 255);</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::NoSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="showGrid">
+           <bool>true</bool>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::SolidLine</enum>
+          </property>
+          <property name="rowCount">
+           <number>0</number>
+          </property>
+          <property name="columnCount">
+           <number>0</number>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+           <string>控制面板</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QPushButton" name="agvBtn1">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(0, 255, 0);</string>
+               </property>
+               <property name="text">
+                <string>1号车</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="agvBtn2">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 255, 0);</string>
+               </property>
+               <property name="text">
+                <string>2号车</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="agvBtn3">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 85, 255);</string>
+               </property>
+               <property name="text">
+                <string>3号车</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="agvBtn4">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 101, 24);</string>
+               </property>
+               <property name="text">
+                <string>4号车</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QPushButton" name="startButton">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>正向启动</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="startButton2">
+               <property name="text">
+                <string>反向启动</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="stopBtn">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>停止</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="selectStationBtn">
+               <property name="text">
+                <string>选择工位</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="2" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="1,1,1,1">
+             <item>
+              <widget class="QPushButton" name="resetBtn">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>复位</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="unlockedBtn">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>解锁</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="stationStartBtn">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>启动工位</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="agv_img_label">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>887</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="WinMenu">
+    <property name="title">
+     <string>           窗口选项</string>
+    </property>
+    <addaction name="stationCargoAction"/>
+    <addaction name="actionCall"/>
+    <addaction name="readCardAction"/>
+    <addaction name="tmcInfoAction"/>
+    <addaction name="crossInfoAction"/>
+    <addaction name="startLocationAction"/>
+    <addaction name="debugAction"/>
+    <addaction name="miniSizeAction"/>
+    <addaction name="actionnnn"/>
+   </widget>
+   <widget class="QMenu" name="HelpMenu">
+    <property name="title">
+     <string>        帮助</string>
+    </property>
+    <addaction name="modifyPwdAction"/>
+    <addaction name="aboutAction"/>
+    <addaction name="urlAction"/>
+   </widget>
+   <addaction name="WinMenu"/>
+   <addaction name="HelpMenu"/>
+  </widget>
+  <action name="modifyPwdAction">
+   <property name="text">
+    <string>密码修改</string>
+   </property>
+  </action>
+  <action name="debugAction">
+   <property name="text">
+    <string>程序收发窗口</string>
+   </property>
+  </action>
+  <action name="maxSizeAction">
+   <property name="text">
+    <string>最大化</string>
+   </property>
+  </action>
+  <action name="miniSizeAction">
+   <property name="text">
+    <string>最小化</string>
+   </property>
+  </action>
+  <action name="agvTaskRecordAction">
+   <property name="text">
+    <string>AGV任务管理</string>
+   </property>
+  </action>
+  <action name="crossTmcFIFOAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>先进先出模式</string>
+   </property>
+  </action>
+  <action name="crossTmcMaxNumAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>大号先行模式</string>
+   </property>
+  </action>
+  <action name="crossTmcCloseAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>关闭主控交管</string>
+   </property>
+  </action>
+  <action name="batteryRecordAction">
+   <property name="text">
+    <string>AGV电池更换记录</string>
+   </property>
+  </action>
+  <action name="barrierAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>障碍生效检测</string>
+   </property>
+  </action>
+  <action name="stationCargoAction">
+   <property name="text">
+    <string>工位-物料窗口</string>
+   </property>
+  </action>
+  <action name="tmcInfoAction">
+   <property name="text">
+    <string>交管信息窗口</string>
+   </property>
+  </action>
+  <action name="crossInfoAction">
+   <property name="text">
+    <string>路口信息窗口</string>
+   </property>
+  </action>
+  <action name="actionCall">
+   <property name="text">
+    <string>呼叫信息窗口</string>
+   </property>
+  </action>
+  <action name="readCardAction">
+   <property name="text">
+    <string>地标卡窗口</string>
+   </property>
+  </action>
+  <action name="doubleTmcInfoAction">
+   <property name="text">
+    <string>双向交管信息窗口</string>
+   </property>
+   <property name="toolTip">
+    <string>双向交管信息窗口</string>
+   </property>
+  </action>
+  <action name="doubleTmcAction">
+   <property name="text">
+    <string>双向交管表</string>
+   </property>
+   <property name="toolTip">
+    <string>双向交管表</string>
+   </property>
+  </action>
+  <action name="aboutAction">
+   <property name="text">
+    <string>关于</string>
+   </property>
+   <property name="toolTip">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="urlAction">
+   <property name="text">
+    <string>公司网址</string>
+   </property>
+   <property name="toolTip">
+    <string>公司网址</string>
+   </property>
+  </action>
+  <action name="startLocationAction">
+   <property name="text">
+    <string>起始点信息窗口</string>
+   </property>
+   <property name="toolTip">
+    <string>起始点信息窗口</string>
+   </property>
+  </action>
+  <action name="actionnnn">
+   <property name="text">
+    <string>一周用车时间</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="img.qrc"/>
+ </resources>
+ <connections/>
+</ui>
